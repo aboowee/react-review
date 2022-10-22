@@ -27,16 +27,6 @@ Optional, but recommended. Do these if you have completed the basics and have am
 2. When a new grocery item is added then any striked-through items disappear from the page/list completely
 3. Add a grocery name and quantity header and add the ability to sort by grocery item name or quantity
 
-# If you want to take it to the next level, and work on your fundamentals across the full stack, continue on through as many steps as you can:
-
-1. Modify the express.js server to send the sample data to your front end when a GET request is made to you server's `/groceries` route
-2. Create a MySQL database called `grocery_db` with one table called `groceries`. Insert the mock data into your `groceries` table so you can query those groceries using the database console
-3. Within your express server, add a MySQL connection in your database such that, when a GET request is made to your `/groceries` express endpoint, grocery data is queried from your `grocery_db`
-4. Update your front end and server to send/handle POST requests which add additional groceries or update the quantity of the grocery as you change it on the front end.
-5. Refactor your database to create a `food_categories` table, containing 5-10 categories of food. Ensure your `groceries` table relates to the `food_categories` table such that every grocery belongs to a `food_category`
-6. Refactor your server to query for `groceries`, joining `food_category`. Send back data that contains food_category for every grocery item
-7. Refactor your front end to contain the food category alongside the rest of the rendered data
-
 ---
 # Installation/Setup Instructions
 1. Perform a Git Fork on the repository
@@ -74,3 +64,15 @@ The only other thing is viewing errors. Please do NOT modify the file located at
 
 
 
+
+
+---
+# (not for this week) If you want to take it to the next level, and work on your fundamentals across the full stack, continue on through as many steps as you can:
+
+1. Modify the express.js server to send the sample data to your front end when a GET request is made to you server's `/groceries` route
+2. Create a MySQL database called `grocery_db` with one table called `groceries`. Insert the mock data into your `groceries` table so you can query those groceries using the database console
+3. Within your express server, add a MySQL connection in your database such that, when a GET request is made to your `/groceries` express endpoint, grocery data is queried from your `grocery_db`
+4. Update your front end and server to send/handle POST requests which add additional groceries or update the quantity of the grocery as you change it on the front end.
+5. Refactor your database to create a `food_categories` table, containing 5-10 categories of food. Ensure your `groceries` table relates to the `food_categories` table such that every grocery belongs to a `food_category`
+6. Refactor your server to query for `groceries`, joining `food_category`. Send back data that contains food_category for every grocery item
+7. Refactor your front end to contain the food category alongside the rest of the rendered data
