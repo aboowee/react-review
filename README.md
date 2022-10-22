@@ -7,10 +7,10 @@
 Grocery List displays a list of groceries and their quantity from an array upon initial load.
 It allows users to add more groceries to the database and immediately displays new ones added.
 
-# Criteria (this section not applicable to solo week)
+# Criteria
 * pairing (solo) time target: 8 hours
 * if you finish basic requirements before then, you *must* move along to advanced content.
-* you must schedule a OH slot with any TM or SEIR by Friday afternoon to show your diagram (described below), demonstrate your working app (or as much as you have implemented), and briefly walk through your code
+* you must use help desk, or schedule a OH slot with any TM or SEIR by EOD Friday to show your diagram (described below), demonstrate your working app (or as much as you have implemented), and briefly walk through your code
 * you must create a visual diagram of how the data is flowing through your application before your OH, and show your diagram to whomever you meet with, as well as submit it to: rpp.communication@galvanize.com
 
 
