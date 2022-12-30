@@ -8,9 +8,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: groceryList.groceryList
-    }
-
+      list: groceryList.groceryList,
+    };
+    this.maxIDValue = Math.max(...this.state.list.map(currentItem => currentItem.id))
   }
 
   clickHandler(event) {
@@ -20,19 +20,35 @@ class App extends React.Component {
       if (currentItem.description === addItem) {
         currentItem.quantity += addQuantity;
         this.setState(this.state.list);
+        console.log(this.state.list);
         return;
       }
     }
-      var newIDValue = this.state.list[this.state.list.length-1].id
-      this.state.list.push({id: newIDValue + 1, quantity: addQuantity, description: addItem})
+      this.maxIDValue++;
+      this.state.list.push({id: this.maxIDValue, quantity: addQuantity, description: addItem});
       this.setState(this.state.list);
+      console.log(this.state.list);
   }
 
+  sortByItem() {
+    this.state.list.sort((a,b) => (a.description > b.description) ? 1 : ((b.description > a.description) ? -1 : 0))
+    this.setState(this.state.list);
+    console.log(this.state.list);
+  }
 
+  sortByQuantity() {
+    this.state.list.sort((a,b) => (a.quantity > b.quantity) ? 1 : ((b.quantity > a.quantity) ? -1 : 0))
+    this.setState(this.state.list);
+    console.log(this.state.list);
+  }
 
   render () {
     return (
       <div>
+        <header>
+          <button type="button" onClick={this.sortByItem.bind(this)}>Sort By Item</button>
+          <button type="button" onClick={this.sortByQuantity.bind(this)}>Sort By Quantity</button>
+        </header>
         <div className = "addGrocery">
           <AddGrocery data={this.state.list} handleClick={this.clickHandler.bind(this)}/>
         </div>
